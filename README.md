@@ -1,66 +1,17 @@
-## Foundry
+### Reactive Network Cross Chain Lending 
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+This code example demonstrates how Reactive Network can be used for a cross chain lending protocol.
+Deploy the `Collateral.sol` contract on an origin chain to manage user's deposits. Deploy the `Loan.sol`
+contract on the destination chain to manage user's issuing and repaying of loans. Finally, deploy the
+`ReactiveLoan.sol` which subscribes and monitors events on both the origin and destination chains and
+triggers callbacks when appropriate. See the list of available origin and destination chains in the next section.
 
-Foundry consists of:
+## Origin and Destination Chains
+[available origin and destination chains](https://dev.reactive.network/origins-and-destinations)
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## License
 
-## Documentation
+MIT
 
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+This is not production ready software and has not been audited, use at your own risk. 
+I'm not liable for any losses incurred during use of this code.
